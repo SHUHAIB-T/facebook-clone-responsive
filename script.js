@@ -29,6 +29,23 @@ window.addEventListener("resize", () => {
     }else{
         btn.style.display='block';
         document.querySelector('.search').style.display='none';
+        dis.style.display='block';
+    }
+});
+window.addEventListener("resize", () => {
+    const width = window.innerWidth;
+    if(width<=700){
+        document.querySelector('.left-sec').style.display='none';
+    }else{
+        document.querySelector('.left-sec').style.display='block';
+    }
+});
+window.addEventListener("resize", () => {
+    const width = window.innerWidth;
+    if(width<=1200){
+        document.querySelector('.right-sec').style.display='none';
+    }else{
+        document.querySelector('.right-sec').style.display='block';
     }
 });
 

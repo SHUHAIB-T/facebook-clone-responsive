@@ -26,7 +26,7 @@
 }
 
 .grid-container{
-    width: 100vw;
+    width: 100%;
     position: fixed;
     z-index: 6;
     display: grid;
@@ -105,7 +105,7 @@
         box-shadow: 0px 10px 10px 1px #dcdcdc;
     }
 }
-@media only screen and (max-width: 2000px) and (min-width: 401px){
+@media only screen and (max-width: 2600px) and (min-width: 401px){
 .prof-deatails{
     display: flex;
     flex-direction: column;
@@ -254,7 +254,7 @@
     grid-template-areas: "left midd midd midd right";
     height: 100vh;
 }
-@media only screen and (max-width: 2000px) and (min-width: 1201px){
+@media only screen and (max-width: 2600px) and (min-width: 1200px){
     .left-icon-container{
         padding: 5px 15px;
         display: flex;
@@ -278,6 +278,9 @@
       .left-sec:hover::-webkit-scrollbar {
         display: block;
       }
+      .left-icon-container h6{
+        display: block;
+    }
 }
 
   
@@ -345,8 +348,19 @@
     display: flex;
 
 }
+@media only screen and (max-width:360) {
+    .story-card{
+        padding: 0px 0px 5px 10px;
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    }    
+}
 .story-card{
     padding: 0px 0px 5px 10px;
+    display: flex;
+    flex-direction: column;
+    width: 500px;
 }
 .story{
     padding: 10px 0px;
@@ -355,12 +369,139 @@
     display: flex;
     width: 100%;
     overflow-x: scroll;
+    margin-bottom: 10px;
+}
+.story-container::-webkit-scrollbar{
+    display: none;
 }
 .story-container .stories{
     min-width: 110px;
     height: 200px;
-    background-color: red;
     margin-left: 5px;
     border-radius: 15px;
     overflow: hidden;
+}
+.col {
+    position: relative;
+    width: 100%;
+    z-index: 0;
+    display: flex;
+    justify-content: center;
+}
+.profile-story-main .imgg{
+    position: absolute;
+    z-index: 3;
+    top: 130px;
+    left: 35px;
+    border: 3px solid #ffffff;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.white-overlay{
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 100px;
+    top: 145px;
+    background: #ffffff;
+}
+.white-overlay h4{
+    margin-top: 30px;
+    font-size: 13px;
+}
+.profile-story img{
+    position: absolute;
+    z-index: 3;
+    top: 10px;
+    left: 10px;
+    border: 3px solid #1861ff;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.overlay {
+    z-index: 2;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: #000000;
+}
+.col:hover .overlay {
+    opacity: 0.2;
+    cursor: pointer;
+}
+
+.story-button-wrapper{
+    position: relative;
+}
+.next-btn{
+    position: absolute;
+    top: 70px;
+    right: -5px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 0px 5px 5px #00000051 ;
+    cursor: pointer;
+}
+.prev-btn{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 70px;
+    left: -5px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #fff;
+    box-shadow: 0px 0px 5px 5px #00000051 ;
+    cursor: pointer;
+}
+.video h4{
+    font-size: 10px;
+    margin-left: 5px;
+    margin-top: 7px;
+}
+.video{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 0px 33px;
+    border-radius: 7px;
+}
+.video:hover{
+    cursor: pointer;
+    background: #dbdbdb;
+}
+.prof-icon-wrapper{
+    justify-content: space-between;
+}
+.pro-ic-con{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    width: 50%;
+}
+.like-comt{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 30px;
 }

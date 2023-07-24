@@ -42,7 +42,7 @@ window.addEventListener("resize", () => {
 });
 window.addEventListener("resize", () => {
     const width = window.innerWidth;
-    if(width<=1200){
+    if(width<=1220){
         document.querySelector('.right-sec').style.display='none';
     }else{
         document.querySelector('.right-sec').style.display='block';
@@ -57,3 +57,31 @@ document.getElementById("toggleButton").addEventListener("click", function() {
         profDetails.style.display = "none";
     }
 });
+
+// scroll--code--
+
+var back = document.getElementById('slide-back');
+back.onclick = function () {
+    var container = document.getElementById('content');
+    sideScroll(container,'left',2,350,5);
+};
+var forward = document.getElementById('slide');
+forward.onclick = function () {
+    var container = document.getElementById('content');
+    sideScroll(container,'right',2,350,5);
+};
+
+function sideScroll(element,direction,speed,distance,step){
+    scrollAmount = 0;
+    var slideTimer = setInterval(function(){
+        if(direction == 'left'){
+            element.scrollLeft -= step;
+        } else {
+            element.scrollLeft += step;
+        }
+        scrollAmount += step;
+        if(scrollAmount >= distance){
+            window.clearInterval(slideTimer);
+        }
+    }, speed);
+}
